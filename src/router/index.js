@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import Doc from '../views/Doc.vue'
+import SwitchDemo from '../components/SwitchDemo.vue'
 import ButtonDemo from '../components/ButtonDemo.vue'
 import InputDemo from '../components/InputDemo.vue'
 import FormDemo from '../components/FormDemo.vue'
@@ -18,6 +19,14 @@ const router = createRouter({
       path: '/doc',
       component: Doc,
       children:[
+        // {
+        //   path: '',
+        //   component: SwitchDemo,
+        // },
+        {
+          path: '/doc/switch',
+          component: SwitchDemo,
+        },
         {
           path: '/doc/button',
           component: ButtonDemo,
@@ -33,6 +42,10 @@ const router = createRouter({
       ]
     }
   ]
+})
+
+router.afterEach(()=>{
+  console.log("router/index.js里面路由切换了");
 })
 
 export default router

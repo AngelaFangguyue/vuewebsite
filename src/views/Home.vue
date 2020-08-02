@@ -1,12 +1,12 @@
 <template>
-  <div class="home">
-    <Topnav></Topnav>
+<!--  <div class="home">-->
+  <div>
+    <Topnav/>
     <div class="banner">
-      <div class="logo">logo</div>
       <div class="intro">
         <h1>guluUI</h1>
         <h2>基于Vue3和Typescript的UI框架</h2>
-        <div class="links">
+        <div class="actions">
           <router-link to="/doc">查看文档</router-link>
           <a href="http://github.com">GitHub</a>
         </div>
@@ -23,17 +23,39 @@
   }
 </script>
 <style scoped lang="less">
-  div.home{
+  /*div.home{*/
+  /*  display: flex;*/
+  /*  flex-direction: column;*/
+  /*   height: 100vh;*/
+  /*  div.intro{*/
+  /*    background-color: lightblue;*/
+  /*    display: flex;*/
+  /*    flex-direction: column;*/
+  /*    justify-content: center;*/
+  /*    align-items: center;*/
+  /*    padding: 100px 0;*/
+  /*  }*/
+  /*}*/
+
+  .banner {
+    padding: 100px 0;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    height: 100vh;
-    div.intro{
-      background-color: lightblue;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 100px 0;
+    background: lightgreen;
+    > .actions{
+      padding: 8px 0;
+      a {
+        margin:0 8px;
+        background: #fff;
+        display: inline-block;
+        @h: 28px;
+        height: @h;
+        line-height: @h;
+        border-radius: @h/2;
+        padding: 0 8px;
+      }
     }
   }
 </style>

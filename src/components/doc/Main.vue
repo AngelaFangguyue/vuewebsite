@@ -9,5 +9,6 @@
   main {
     background-color: lightgreen;
     flex-grow: 1;
+    /*overflow-y: auto;*/
   }
 </style>
