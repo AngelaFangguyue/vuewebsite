@@ -8,10 +8,10 @@
   <router-view />
 </template>
 
-<script>
+<script lang="ts">
 /*import HelloWorld from './components/HelloWorld.vue'*/
 
-import {ref,provide} from "vue";
+import { ref,provide } from "vue";
 import router from "./router";
 
 

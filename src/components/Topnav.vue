@@ -8,8 +8,8 @@
     </ul>
   </div>
 </template>
-<script>
-  import {inject} from 'vue'
+<script lang="ts">
+  import { inject } from 'vue'
   export default {
     name: "Topnav",
     setup(){
@@ -27,9 +27,9 @@
 
   }
 </script>
-<style scoped lang="less">
+<style scoped lang="scss">
   .topnav{
-    padding: 20px;
+    padding: 16px;
     background-color: pink;
     display: flex;
     position: fixed;

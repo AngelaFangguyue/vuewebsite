@@ -36,18 +36,19 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
   import Topnav from "../components/Topnav.vue"
   // import Aside  from "../components/doc/Aside.vue"
   // import Main  from "../components/doc/Main.vue"
-  import { inject } from "vue";
+  //import { Ref, inject } from "vue";
   import router from "../router";
+  import { Ref, inject } from "vue";
 
   export default {
     name: "Doc",
     components:{ Topnav},//, Aside, Main},
     setup(){
-      let asideVisible = inject("asideVisible")
+      let asideVisible = inject<Ref<boolean>>("asideVisible")
       //console.log(asideVisible);
 
       // if(document.documentElement.clientWidth<=500){
@@ -67,7 +68,7 @@
   }
 </script>
 
-<style lang="less" scoped>
+<style lang="scss" scoped>
   /*.doc{*/
   /*  background-color: orangered;*/
   /*  display: flex;*/
